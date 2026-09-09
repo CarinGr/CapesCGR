@@ -1,5 +1,7 @@
 # Structures de données abstraites
 
+[Notebook du cours](cours.ipynb) · [TD et correction](TD1_correction.ipynb)
+
 > **Cours du 1er septembre** — Louis Leskow  
 > Contact : `louis.leskow@ac.versailles.fr`
 

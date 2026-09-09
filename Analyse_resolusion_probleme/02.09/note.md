@@ -1,77 +1,101 @@
-# Cours du 02/09
+# Algorithmique et complexité — 02/09
 
-### Information
+**Contact :** `Irenee.Briquel@cyu.fr`
 
-Irenee.Briquel@cyu.fr
+## 1. Mesurer la complexité en temps
 
-#Algorithmique et complexité
+La **complexité en temps** mesure le coût d’un algorithme en nombre d’opérations élémentaires.
 
-Complexité en temps = temps de calcule d'un algo En nombre d'opérations élémentaire
+### Exemples de comptage notés en cours
 
-ex : 
-- une affectation a = 1 -> 1 opération
-- une calcule algébrique 3 + 5 -> 1 operation ; (3+8)*5 -> 2 opéation
-- une consulation : b = a + 3 -> 3 opération
+| Exemple | Nombre d’opérations noté |
+| --- | --- |
+| Affectation : `a = 1` | 1 |
+| Calcul : `3 + 5` | 1 |
+| Calcul : `(3 + 8) * 5` | 2 |
+| Consultation, calcul et affectation : `b = a + 3` | 3 |
 
-Discutable car en fonction de language machine, chacun a sa maniere par exemple de faire une // (division entier)
+Le comptage dépend du modèle choisi et du langage machine. Par exemple, il existe plusieurs façons d’effectuer une division entière (`//`).
 
-10 >> 1 c'est le resultat identique (ou ya d'autre méthode)
+**Exemple noté :** `10 >> 1` donne le même résultat que la division entière de 10 par 2.
 
-un autre exemple 
-P = [1,2,3] (combien d'opération)
-P[2] = 5 (un peu difficle a voir)
+Autres exemples dont le coût est à discuter :
 
-Sinon si c'est trop flou on peut compter le nombre de comparaison qu'il y a dans un algo. En gros on choisi une opération TEMOI 
+```python
+P = [1, 2, 3]
+P[2] = 5
+```
 
+Si le comptage est trop flou, on choisit une **opération témoin**, par exemple une comparaison, puis on compte ses occurrences.
 
+## 2. Coût des boucles
+
+### Principe général
+
+```text
 Pour i de 1 à n :
     opération i
--> complixité :
-cout de la boucle : 
+```
 
-La somme de i= 1 à N : cout(opération i)
+Le coût est la somme des coûts des opérations :
 
-pour i de 1 à n :
-    print(i) -> (1 opération)
+$$
+\sum_{i=1}^{n} \operatorname{coût}(\text{opération } i)
+$$
 
-en tout il y a N opération
+### Boucle simple
 
+```text
+Pour i de 1 à n :
+    afficher(i)  → 1 opération
+```
 
-Print i de 1 à n :
+**Total :** n opérations.
+
+### Deux boucles imbriquées
+
+```text
+Pour i de 1 à n :
     Pour j de 1 à n :
-        print(i) -> (1 opération)
-en tout il y N^2 opération
+        afficher(i)  → 1 opération
+```
 
+**Total :** n² opérations.
 
-Pour i de 1 à N :
+### Boucle interne dépendant de i
+
+```text
+Pour i de 1 à n :
     Pour j de 1 à i :
-        print("coucou")
+        afficher("coucou")
+```
 
-cout de la boucle interne : i opération
+- Coût de la boucle interne : i opérations.
+- Coût total : 1 + 2 + … + n = n(n + 1) / 2.
+- Ordre de grandeur : **O(n²)**.
 
-cout du tout : somme de i à N de i
+On parcourt les couples (i, j) tels que 1 ≤ j ≤ i ≤ n. Le schéma du cours représente ces couples sur les axes i et j :
 
-donc ça fait n(n+1)/2 (toujours O(N2))
-
-J
-|
-|
+```text
+j
 |
 |
 |
 |___________________ i
+```
 
-on fait tout les couples j-i
+## 3. Ordres de grandeur
 
+| Notation | Nom |
+| --- | --- |
+| O(log n) | Logarithmique |
+| O(n) | Linéaire |
+| O(n log n) | Quasi linéaire |
+| O(n²) | Quadratique |
+| O(nᵏ) | Polynomial |
+| O(eⁿ) | Exponentiel |
 
-wikipedia notation de laudon
+## À revoir
 
-REVOIR GRAND TO, TETA, OMEGA ect 
-
-O(log(n)) = logarithimque
-O(n) = linéaire
-O(nlog(n)) = quasi linéaire
-O(n^2) : quadratique
-O(n^k) : polinomial
-O(e^n) : exponentiel
-    
+- Les notations de Landau : grand O, Θ (thêta), Ω (oméga), etc.
+- Piste de recherche notée en cours : « notation de Landau » sur Wikipédia.

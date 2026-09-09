@@ -1,32 +1,40 @@
+# Savoir informatique — 07/09
 
+## Préparation de l’oral
 
-1H30 de préparation (conseil dédié à la création des support [cours, exercice, correction d'exo])
-30min l'oral
+| Étape | Durée | Notes |
+| --- | --- | --- |
+| Préparation | 1 h 30 | Conseil : consacrer ce temps à la création des supports (cours, exercices et corrections). |
+| Oral | 30 min | Présentation et échanges. |
 
-Dans les livres on peut prendre des captures d'écran pour des exo interréssant ça gagne du temps
+### Supports et ressources
 
-Cours eduscol pour prémiere / terminal peut etre il seront pas disponible sur le support 
+- On peut apporter des livres.
+- Prendre des captures d’écran d’exercices intéressants dans les livres peut faire gagner du temps.
+- **À vérifier :** les cours Éduscol de première et de terminale ne seront peut-être pas disponibles sur le support.
 
+### Présentation et questions
 
-si ouverture de conclusion, il se peut qu'on nous pose des question sur l'ouverture et pas sur le fonds
+- L’oral est évalué sur la cohérence entre le sujet et ce que l’on présente.
+- Il faut connaître les programmes.
+- On peut nous demander de justifier le choix du plan.
+- Une ouverture en conclusion peut entraîner des questions sur cette ouverture plutôt que sur le fond de l’exposé.
 
-on peut nous demander pk ce plan, 
+## Exemple pédagogique : `for` ou `while` ?
 
-On peut ramener des bouqins
+**Question possible :** comment faire comprendre la différence entre une boucle `while` et une boucle `for` ?
 
-L'oral est évaluer sur la cohérence entre le seujt et cquon dit 
+Exemple avec l’inflation :
 
-connaisaance de programme 
+| Situation | Boucle |
+| --- | --- |
+| Appliquer une évolution sur 15 ans | `for` |
+| Continuer jusqu’à atteindre une certaine somme | `while` |
 
-exemple : avec quel méthode vous feriez comprendre la différence entre une boucle while plutot qu'une boucle for 
-exemple inflation :
-Appliquer sur 15 ans (for)
-Jusqua atteindre une certaine somme (while)
+### Progression à réfléchir
 
+Dans quel ordre aborder les tableaux (listes), les conditions `if`, les boucles `for` et `while`, puis les fonctions ?
 
-Dans quel sens on fait les tableau (les listes) ; les if ; les for; les while ; les fonction.
+## Algorithmes gloutons
 
-
-COURS ALGO GLOUTON
-
-ça sert a optimisation
+Ils servent à résoudre des problèmes d’optimisation.

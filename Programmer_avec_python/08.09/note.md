@@ -1,19 +1,28 @@
-Exercice 2 du td : 
+# TD 1 — Notes du 08/09
 
-1.
+[Ouvrir le notebook](note.ipynb) · [Énoncé du TD](TD1.pdf)
 
-utiliser un ensemble
+## Exercice 2 — Délimiteurs
+
+### 1. Vérifier une chaîne
+
+**Piste personnelle :** utiliser un ensemble.
+
+```python
 stack = []
 ouvrantes = "({["
 match = {"{' = "}" , "[" : "]" ..}
 if char in ouvrantes :
 if char in fermantes and (len(stack)) == 0 or match[char] != stacl.pop()
+```
 
-sinon on peut utilisé match.keys() et match.values()
+Autre piste : utiliser `match.keys()` et `match.values()`.
 
+### 2. Retrouver la parenthèse correspondante
 
-2.
+**Essai personnel en cours :**
 
+```python
 def bien_delimité(c, i) :
     stack = []
     ouvrantes = "({["
@@ -34,3 +43,4 @@ def bien_delimité(c, i) :
             if c[j] in ouvrante :
                 return j
     
+```
